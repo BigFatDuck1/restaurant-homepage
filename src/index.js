@@ -1,2 +1,3 @@
+import pageLoad from "./pageLoad.js";
 
-document.querySelector("h1").style.color = "red";
+pageLoad();
