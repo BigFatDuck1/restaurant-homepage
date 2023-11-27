@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-homepage",
+  "version": "1.0.0",
+  "description": "Restaurant homepage (mock)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigFatDuck1/restaurant-homepage.git"
+  },
+  "author": "BigFatDuck1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BigFatDuck1/restaurant-homepage/issues"
+  },
+  "homepage": "https://github.com/BigFatDuck1/restaurant-homepage#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
