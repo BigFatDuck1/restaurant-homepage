@@ -19,10 +19,11 @@ const pageLoad = () => {
         navbar_list.appendChild(navbar_element);
     }
 
-    navbar.appendChild(navbar_list);
     
     content.appendChild(logo);
     content.appendChild(navbar);
+    
+    navbar.appendChild(navbar_list);
 }
 
 export default pageLoad;

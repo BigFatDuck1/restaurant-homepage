@@ -16,6 +16,14 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         clean: true //Clean the dist directory before bundling
     },
+    module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+          },
+        ],
+      },
     mode: "development", //Change this to production when deploying
 }
 
