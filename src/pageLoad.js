@@ -13,7 +13,8 @@ const pageLoad = () => {
     for (let i = 0; i < navbar_items.length; i++) {
         let navbar_element = document.createElement('li');
         //Add text
-        navbar_element.textContent = navbar_items[i];
+        // navbar_element.textContent = navbar_items[i];
+        navbar_element.innerHTML = `<a href="#" class="navbar_links">${navbar_items[i]}</a>`;
         //Add class
         navbar_element.classList.add("navbar-item");
         navbar_list.appendChild(navbar_element);
@@ -22,7 +23,7 @@ const pageLoad = () => {
     
     content.appendChild(logo);
     content.appendChild(navbar);
-    
+
     navbar.appendChild(navbar_list);
 }
 
