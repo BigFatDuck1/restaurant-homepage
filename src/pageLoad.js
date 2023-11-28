@@ -1,4 +1,4 @@
-import { welcome } from "./pages/welcome";
+import appendContent from "./appendContent";
 
 const pageLoad = () => {
     const content = document.querySelector('#content');
@@ -39,18 +39,12 @@ const pageLoad = () => {
             document.querySelector(".page").innerHTML = "";
 
             //Adds new content
-            appendContent(page, this.textContent);
+            const navbar_string = this.textContent;
+            appendContent(page, navbar_string);
         })
     })
 
 
-}
-
-const appendContent = (parent, content) => {
-    const page_content = document.createElement('div');
-    page_content.classList.add("page_content");
-    page_content.textContent = `This is the page for ${content}`;
-    parent.appendChild(page_content);
 }
 
 export default pageLoad;
