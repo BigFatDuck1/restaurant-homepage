@@ -1,3 +1,5 @@
+import { welcome } from "./pages/welcome";
+
 const pageLoad = () => {
     const content = document.querySelector('#content');
 
