@@ -110,6 +110,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/appendContent.js":
+/*!******************************!*\
+  !*** ./src/appendContent.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _pages_welcome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/welcome */ \"./src/pages/welcome.js\");\n/* harmony import */ var _pages_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/menu */ \"./src/pages/menu.js\");\n/* harmony import */ var _pages_location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/location */ \"./src/pages/location.js\");\n/* harmony import */ var _pages_reservation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/reservation */ \"./src/pages/reservation.js\");\n\r\n\r\n\r\n\r\n\r\nconst appendContent = (parent, string) => {\r\n    let restaurant_pages = {\r\n        \"Welcome\": _pages_welcome__WEBPACK_IMPORTED_MODULE_0__.welcome,\r\n        \"Menu\": _pages_menu__WEBPACK_IMPORTED_MODULE_1__.menu,\r\n        \"Location\": _pages_location__WEBPACK_IMPORTED_MODULE_2__.location,\r\n        \"Reservation\": _pages_reservation__WEBPACK_IMPORTED_MODULE_3__.reservation,\r\n    }\r\n\r\n    let page_content = restaurant_pages[string](); //Remember to call the function to generate the DOM Node\r\n\r\n    console.log(page_content);\r\n\r\n    parent.appendChild(page_content);\r\n\r\n    return page_content;\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (appendContent); \n\n//# sourceURL=webpack://restaurant-homepage/./src/appendContent.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -126,7 +136,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _pag
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _pages_welcome__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/welcome */ \"./src/pages/welcome.js\");\n\r\n\r\nconst pageLoad = () => {\r\n    const content = document.querySelector('#content');\r\n\r\n    const logo = document.createElement(\"div\");\r\n    logo.classList.add(\"logo\");\r\n    logo.textContent = \"LOGO\";\r\n\r\n    const navbar = document.createElement('div');\r\n    navbar.classList.add(\"navbar\");\r\n\r\n    const navbar_list = document.createElement('ul');\r\n    let navbar_items = ['Welcome', 'Menu', 'Location', 'Reservation'];\r\n    for (let i = 0; i < navbar_items.length; i++) {\r\n        let navbar_element = document.createElement('li');\r\n        //Add text\r\n        // navbar_element.textContent = navbar_items[i];\r\n        navbar_element.innerHTML = `<a href=\"#\" class=\"navbar_links\">${navbar_items[i]}</a>`;\r\n        //Add class\r\n        navbar_element.classList.add(\"navbar-item\");\r\n        navbar_list.appendChild(navbar_element);\r\n    }\r\n\r\n    \r\n    content.appendChild(logo);\r\n    content.appendChild(navbar);\r\n\r\n    navbar.appendChild(navbar_list);\r\n\r\n    const page = document.createElement('div');\r\n    page.classList.add(\"page\");\r\n    page.textContent = \"This is the page content container. If this is visible, then the right content is not displayed.\";\r\n    content.appendChild(page);\r\n\r\n    document.querySelectorAll(\".navbar_links\").forEach((element) => {\r\n        element.addEventListener(\"click\", function() {\r\n            //Clears preexisting content\r\n            document.querySelector(\".page\").innerHTML = \"\";\r\n\r\n            //Adds new content\r\n            appendContent(page, this.textContent);\r\n        })\r\n    })\r\n\r\n\r\n}\r\n\r\nconst appendContent = (parent, content) => {\r\n    const page_content = document.createElement('div');\r\n    page_content.classList.add(\"page_content\");\r\n    page_content.textContent = `This is the page for ${content}`;\r\n    parent.appendChild(page_content);\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoad);\n\n//# sourceURL=webpack://restaurant-homepage/./src/pageLoad.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _appendContent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./appendContent */ \"./src/appendContent.js\");\n\r\n\r\nconst pageLoad = () => {\r\n    const content = document.querySelector('#content');\r\n\r\n    const logo = document.createElement(\"div\");\r\n    logo.classList.add(\"logo\");\r\n    logo.textContent = \"LOGO\";\r\n\r\n    const navbar = document.createElement('div');\r\n    navbar.classList.add(\"navbar\");\r\n\r\n    const navbar_list = document.createElement('ul');\r\n    let navbar_items = ['Welcome', 'Menu', 'Location', 'Reservation'];\r\n    for (let i = 0; i < navbar_items.length; i++) {\r\n        let navbar_element = document.createElement('li');\r\n        //Add text\r\n        // navbar_element.textContent = navbar_items[i];\r\n        navbar_element.innerHTML = `<a href=\"#\" class=\"navbar_links\">${navbar_items[i]}</a>`;\r\n        //Add class\r\n        navbar_element.classList.add(\"navbar-item\");\r\n        navbar_list.appendChild(navbar_element);\r\n    }\r\n\r\n    \r\n    content.appendChild(logo);\r\n    content.appendChild(navbar);\r\n\r\n    navbar.appendChild(navbar_list);\r\n\r\n    const page = document.createElement('div');\r\n    page.classList.add(\"page\");\r\n    page.textContent = \"This is the page content container. If this is visible, then the right content is not displayed.\";\r\n    content.appendChild(page);\r\n\r\n    document.querySelectorAll(\".navbar_links\").forEach((element) => {\r\n        element.addEventListener(\"click\", function() {\r\n            //Clears preexisting content\r\n            document.querySelector(\".page\").innerHTML = \"\";\r\n\r\n            //Adds new content\r\n            const navbar_string = this.textContent;\r\n            (0,_appendContent__WEBPACK_IMPORTED_MODULE_0__[\"default\"])(page, navbar_string);\r\n        })\r\n    })\r\n\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (pageLoad);\n\n//# sourceURL=webpack://restaurant-homepage/./src/pageLoad.js?");
+
+/***/ }),
+
+/***/ "./src/pages/location.js":
+/*!*******************************!*\
+  !*** ./src/pages/location.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   location: () => (/* binding */ location)\n/* harmony export */ });\n\r\nconst location = () => {\r\n    const location_page = document.createElement(\"div\");\r\n    location_page.classList.add(\"location_page\");\r\n    location_page.textContent = \"Location: Address\";\r\n\r\n    return location_page;\r\n}\r\n\r\n\n\n//# sourceURL=webpack://restaurant-homepage/./src/pages/location.js?");
+
+/***/ }),
+
+/***/ "./src/pages/menu.js":
+/*!***************************!*\
+  !*** ./src/pages/menu.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   menu: () => (/* binding */ menu)\n/* harmony export */ });\n\r\nconst menu = () => {\r\n    const menu_page = document.createElement(\"div\");\r\n    menu_page.classList.add(\"menu_page\");\r\n    menu_page.textContent = \"Menu\";\r\n\r\n    return menu_page;\r\n}\r\n\r\n\n\n//# sourceURL=webpack://restaurant-homepage/./src/pages/menu.js?");
+
+/***/ }),
+
+/***/ "./src/pages/reservation.js":
+/*!**********************************!*\
+  !*** ./src/pages/reservation.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   reservation: () => (/* binding */ reservation)\n/* harmony export */ });\n\r\nconst reservation = () => {\r\n    const reservation_page = document.createElement(\"div\");\r\n    reservation_page.classList.add(\"reservation_page\");\r\n    reservation_page.textContent = \"Fill in your details for reservation\";\r\n\r\n    return reservation_page;\r\n}\r\n\r\n\n\n//# sourceURL=webpack://restaurant-homepage/./src/pages/reservation.js?");
 
 /***/ }),
 
