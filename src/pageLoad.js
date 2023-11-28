@@ -33,13 +33,11 @@ const pageLoad = () => {
 
     document.querySelectorAll(".navbar_links").forEach((element) => {
         element.addEventListener("click", function() {
-
+            //Clears preexisting content
             document.querySelector(".page").innerHTML = "";
 
-            const page_content = document.createElement('div');
-            page_content.classList.add("page_content");
-            page_content.textContent = `This is the page for ${this.textContent}`;
-            page.appendChild(page_content);
+            //Adds new content
+            appendContent(page, this.textContent);
         })
     })
 
@@ -47,7 +45,10 @@ const pageLoad = () => {
 }
 
 const appendContent = (parent, content) => {
-
+    const page_content = document.createElement('div');
+    page_content.classList.add("page_content");
+    page_content.textContent = `This is the page for ${content}`;
+    parent.appendChild(page_content);
 }
 
 export default pageLoad;
