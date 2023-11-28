@@ -1,11 +1,12 @@
 import appendContent from "./appendContent";
+import { welcome } from "./pages/welcome";
 
 const pageLoad = () => {
     const content = document.querySelector('#content');
 
     const logo = document.createElement("div");
     logo.classList.add("logo");
-    logo.textContent = "LOGO";
+    logo.textContent = "Dee & Em's";
 
     const navbar = document.createElement('div');
     navbar.classList.add("navbar");
@@ -30,7 +31,9 @@ const pageLoad = () => {
 
     const page = document.createElement('div');
     page.classList.add("page");
-    page.textContent = "This is the page content container. If this is visible, then the right content is not displayed.";
+    // page.textContent = "This is the page content container. If this is visible, then the right content is not displayed.";
+    //Default is welcome page
+    appendContent(page, "Welcome");
     content.appendChild(page);
 
     document.querySelectorAll(".navbar_links").forEach((element) => {

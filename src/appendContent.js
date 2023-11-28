@@ -13,8 +13,6 @@ const appendContent = (parent, string) => {
 
     let page_content = restaurant_pages[string](); //Remember to call the function to generate the DOM Node
 
-    console.log(page_content);
-
     parent.appendChild(page_content);
 
     return page_content;

@@ -2,7 +2,27 @@
 const welcome = () => {
     const welcome_page = document.createElement("div");
     welcome_page.classList.add("welcome_page");
-    welcome_page.textContent = "Welcome to the restaurant!";
+
+    const title = document.createElement("h1");
+    title.classList.add("title");
+    title.textContent = "Dee & Em's - a taste to die for";
+
+    const description = document.createElement("p");
+    description.classList.add("description");
+    description.textContent = `Dee & Em's has been serving the same old classic All-American diet since 1921. 
+    Eat and drink to your heart's content here - what's the point of living if you can't taste it?`;
+
+    const quote = document.createElement("p");
+    quote.classList.add("quote");
+    quote.innerHTML = `"We don't live to eat and make money. 
+    We eat and make money to be able to enjoy life. 
+    That is what life means, and that is what life is for." <br>
+    - George Lee Mallory`;
+
+    welcome_page.appendChild(title);
+    welcome_page.appendChild(description);
+    welcome_page.appendChild(quote);
+
 
     return welcome_page;
 }
