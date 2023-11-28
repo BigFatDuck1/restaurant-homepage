@@ -25,6 +25,29 @@ const pageLoad = () => {
     content.appendChild(navbar);
 
     navbar.appendChild(navbar_list);
+
+    const page = document.createElement('div');
+    page.classList.add("page");
+    page.textContent = "This is the page content container. If this is visible, then the right content is not displayed.";
+    content.appendChild(page);
+
+    document.querySelectorAll(".navbar_links").forEach((element) => {
+        element.addEventListener("click", function() {
+
+            document.querySelector(".page").innerHTML = "";
+
+            const page_content = document.createElement('div');
+            page_content.classList.add("page_content");
+            page_content.textContent = `This is the page for ${this.textContent}`;
+            page.appendChild(page_content);
+        })
+    })
+
+
+}
+
+const appendContent = (parent, content) => {
+
 }
 
 export default pageLoad;
