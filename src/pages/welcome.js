@@ -14,8 +14,8 @@ const welcome = () => {
 
     const quote = document.createElement("p");
     quote.classList.add("quote");
-    quote.innerHTML = `"We don't live to eat and make money. 
-    We eat and make money to be able to enjoy life. 
+    quote.innerHTML = `"We don't eat and make money to be able to enjoy life. 
+    We live to make money in order to eat.
     That is what life means, and that is what life is for." <br>
     - George Lee Mallory`;
 

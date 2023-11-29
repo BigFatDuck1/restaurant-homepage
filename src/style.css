@@ -47,3 +47,30 @@ ul li {
 .title {
     align-self: center;
 }
+
+/* Menuu */
+.menu_page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+}
+
+.menu_title {
+    font-size: 1.5rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.menu_description {
+    text-align: center;
+}
