@@ -49,7 +49,7 @@ const location_objects = {
     },
     korea: {
         country: "Korea",
-        address: "204-1, Buyeongapateu, Suseong-dong, Seoul, Korea",
+        address: "204-1, Buyeongapateu, Suseong-dong, Korea",
         hours: "9am - 12am",
         map: "",
     },
@@ -61,7 +61,7 @@ const location_objects = {
     },
     sg: {
         country: "Singapore",
-        address: "1 Raffles Place, Singapore",
+        address: "1 Raffles Place, Republic Plaza, Singapore",
         hours: "7am - 9pm",
         map: "",
     },

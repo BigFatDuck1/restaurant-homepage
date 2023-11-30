@@ -87,9 +87,12 @@ ul li {
 .location_card {
     display: grid;
     grid-template-areas: 
-    "left country"
-    "left address"
-    "left hours";
+    "left country country"
+    "left address address"
+    "left hours hours";
+
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 
 .map {
@@ -104,4 +107,12 @@ ul li {
 }
 .hours {
     grid-area: hours;
+}
+
+/* Reservation form */
+form.reservation_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
