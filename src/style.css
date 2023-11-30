@@ -1,10 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Passion+One:wght@400;700&family=Roboto+Slab&display=swap');
 
 * {
-    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pacifico', sans-serif;
+    background-color: var(--bg);
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
 }
 
 :root {
     --navbar-links: black;
+    --primary: #BF3839;
+    --bg: #FEF1D9;
 }
 
 #content {
@@ -15,37 +27,88 @@
 
 .logo {
     font-size: 5rem;
+    width: 100vw;
+    background-color: var(--primary);
+    color: var(--bg);
+    text-align: center;
 }
 
 .navbar ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /* Making it red just like the logo */
+    width: 100vw;
+    background-color: var(--primary);
+    color: var(--bg);
+    
 }
 
 ul li {
     list-style: none;
     padding-right: 3rem;
+    background-color: transparent;
+    
 }
 
 .navbar_links {
+    display: block;
     text-decoration: none;
-    color: var(--navbar-links);
     font-size: 1.5rem;
+    background-color: var(--primary);
+    color: var(--bg);
+    width: 20vw;
+    text-align: center;
 }
 .navbar_links:hover {
-    text-decoration: underline;
     font-style: italic;
+    background-color: var(--bg);
+    color: var(--primary);
+}
+.navbar_links:active, .navbar_links:focus {
+    background-color: var(--bg);
+    color: var(--primary);
 }
 
 /* Welcome */
+.page:has(.welcome_page) {
+    /* Testing purposes */
+    background-color: red;
+}
 .welcome_page {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-image: url("img/burger_grill.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 .title {
     align-self: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.description, .quote {
+    font-size: 1.1rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.title, .description, .quote {
+    /* background-color: var(--bg); */
+    background-color: transparent;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.05rem;
+    color: rgba(0, 0, 0, 0.803);    
 }
 
 /* Menuu */
@@ -102,6 +165,12 @@ ul li {
 .country {
     grid-area: country;
 }
+
+h2.country {
+    font-family: "Roboto Slab", serif;
+    padding-top: 1rem;
+}
+
 .address {
     grid-area: address;
 }
