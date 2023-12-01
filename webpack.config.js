@@ -28,7 +28,7 @@ module.exports = {
           },
         ],
       },
-    mode: "development", //Change this to production when deploying
+    mode: "production", //Change this to production when deploying
 }
 
 // Useful guide: https://www.codeinwp.com/blog/webpack-tutorial-for-beginners/#what-is-webpack
