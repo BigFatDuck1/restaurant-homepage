@@ -1,3 +1,23 @@
+// import Japan from "../img/map/japan.jpg";
+// import Korea from "../img/map/korea.jpg";
+// import Singapore from "../img/map/sg.jpg";
+// import HongKong from "../img/map/hk.jpg";
+// import US from "../img/map/us.jpg";
+
+// const myJapan = new Image();
+// myJapan.src = Japan;
+
+// const myKorea = new Image();
+// myKorea.src = Korea;
+
+// const mySingapore = new Image();
+// mySingapore.src = Singapore;
+
+// const myHongKong = new Image();
+// myHongKong.src = HongKong;
+
+// const myUS = new Image();
+// myUS.src = US;
 
 const location = () => {
     const location_page = document.createElement("div");
@@ -18,6 +38,7 @@ const locationCard = (country_param, address_param, hours_param, map_param) => {
 
     const map = document.createElement("img");
     map.classList.add("map");
+    map.src = map_param;
 
     const country = document.createElement("h2");
     country.classList.add("country");

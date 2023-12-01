@@ -41,14 +41,14 @@ p {
     width: 100vw;
     background-color: var(--primary);
     color: var(--bg);
-    
+
 }
 
 ul li {
     list-style: none;
     padding-right: 3rem;
     background-color: transparent;
-    
+
 }
 
 .navbar_links {
@@ -86,7 +86,7 @@ ul li {
     padding-bottom: 30px;
     background-color: var(--bg);
     text-align: center;
-    
+
 }
 
 .description, .quote {
@@ -99,14 +99,14 @@ ul li {
 }
 
 /* .title, .description, .quote {
-    background-color: var(--bg); 
+    background-color: var(--bg);
     background-color: transparent;
 } */
 
 .quote {
     font-style: italic;
     font-size: 1.05rem;
-    color: rgba(0, 0, 0, 0.803);    
+    color: rgba(0, 0, 0, 0.803);
 }
 
 .burger_image {
@@ -149,6 +149,7 @@ ul li {
 
 /* Location */
 .location_page {
+    margin-top: 2rem;
     width: 90vw;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -158,13 +159,15 @@ ul li {
 
 .location_card {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "left country country"
     "left address address"
     "left hours hours";
 
     border: 1px solid grey;
     border-radius: 5px;
+    box-sizing: border-box;
+    padding: 1rem;
 }
 
 .map {
@@ -189,8 +192,33 @@ h2.country {
 
 /* Reservation form */
 form.reservation_form {
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    gap: 1rem;
+}
+
+input, textarea {
+    width: 50vw;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-family: "Roboto Slab", serif;
+}
+
+#submit {
+    width: 40vw;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-family: "Roboto Slab", serif;
+    background-color: var(--primary);
+    color: var(--bg);
+}
+#submit:hover {
+    border: 1px solid grey;
+    background-color: var(--bg);
+    color: var(--primary);
 }
