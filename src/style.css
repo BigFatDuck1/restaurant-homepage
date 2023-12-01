@@ -190,6 +190,15 @@ h2.country {
     grid-area: hours;
 }
 
+img.map {
+    width: min(100%, 450px);
+    place-content: center;
+}
+
+.country, .address, .hours {
+    padding-left: 1rem;
+}
+
 /* Reservation form */
 form.reservation_form {
     padding-top: 1rem;

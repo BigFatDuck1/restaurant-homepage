@@ -1,23 +1,23 @@
-// import Japan from "../img/map/japan.jpg";
-// import Korea from "../img/map/korea.jpg";
-// import Singapore from "../img/map/sg.jpg";
-// import HongKong from "../img/map/hk.jpg";
-// import US from "../img/map/us.jpg";
+import Japan from "../img/map/japan.jpeg";
+import Korea from "../img/map/korea.jpg";
+import Singapore from "../img/map/sg.jpg";
+import HongKong from "../img/map/hk.jpg";
+import US from "../img/map/usa.jpg";
 
-// const myJapan = new Image();
-// myJapan.src = Japan;
+const myJapan = new Image();
+myJapan.src = Japan;
 
-// const myKorea = new Image();
-// myKorea.src = Korea;
+const myKorea = new Image();
+myKorea.src = Korea;
 
-// const mySingapore = new Image();
-// mySingapore.src = Singapore;
+const mySingapore = new Image();
+mySingapore.src = Singapore;
 
-// const myHongKong = new Image();
-// myHongKong.src = HongKong;
+const myHongKong = new Image();
+myHongKong.src = HongKong;
 
-// const myUS = new Image();
-// myUS.src = US;
+const myUS = new Image();
+myUS.src = US;
 
 const location = () => {
     const location_page = document.createElement("div");
@@ -66,31 +66,31 @@ const location_objects = {
         country: "Japan",
         address: "113 Muzuhara building, Shinjuku, Tokyo, Japan",
         hours: "9am - 10pm",
-        map: "",
+        map: Japan,
     },
     korea: {
         country: "Korea",
         address: "204-1, Buyeongapateu, Suseong-dong, Korea",
         hours: "9am - 12am",
-        map: "",
+        map: Korea,
     },
     hk: {
         country: "Hong Kong",
         address: "65 Nathan Road, Tsim Sha Tsui, Hong Kong",
         hours: "10am - 10pm",
-        map: "",
+        map: HongKong,
     },
     sg: {
         country: "Singapore",
         address: "1 Raffles Place, Republic Plaza, Singapore",
         hours: "7am - 9pm",
-        map: "",
+        map: Singapore,
     },
     us: {
         country: "United States",
         address: "69 Times Square, New York, United States",
         hours: "10am - 10pm",
-        map: "",
+        map: US,
     }
 
 }
