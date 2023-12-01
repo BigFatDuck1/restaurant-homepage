@@ -19,9 +19,13 @@ const welcome = () => {
     That is what life means, and that is what life is for." <br>
     - George Lee Mallory`;
 
+    const image = document.createElement("div");
+    image.classList.add("burger_image");
+
     welcome_page.appendChild(title);
     welcome_page.appendChild(description);
     welcome_page.appendChild(quote);
+    welcome_page.appendChild(image);
 
 
     return welcome_page;

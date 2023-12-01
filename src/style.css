@@ -71,25 +71,22 @@ ul li {
 }
 
 /* Welcome */
-.page:has(.welcome_page) {
-    /* Testing purposes */
-    background-color: red;
-}
 .welcome_page {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-image: url("img/burger_grill.jpg");
+    /* background-image: url("img/burger_grill.jpg");
     background-size: cover;
-    background-attachment: fixed;
-
+    background-attachment: fixed; */
 }
+
 .title {
     align-self: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    width: 100%;
+    background-color: var(--bg);
     text-align: center;
+    
 }
 
 .description, .quote {
@@ -98,17 +95,29 @@ ul li {
     padding-right: 10vw;
     margin: 0;
     padding-bottom: 20px;
+    background-color: var(--bg);
 }
 
-.title, .description, .quote {
-    /* background-color: var(--bg); */
+/* .title, .description, .quote {
+    background-color: var(--bg); 
     background-color: transparent;
-}
+} */
 
 .quote {
     font-style: italic;
     font-size: 1.05rem;
     color: rgba(0, 0, 0, 0.803);    
+}
+
+.burger_image {
+    background-image: url("img/burger_grill.jpg");
+    align-self: center;
+    width: 60vw;
+    height: min(500px, 30vh);
+    background-size: 90%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* Menuu */
